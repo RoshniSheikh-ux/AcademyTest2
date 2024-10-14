@@ -1,0 +1,111 @@
+
+/* Page Title */
+.tutors-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    color: #8c00ff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Tutors Container */
+.tutors-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 35px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Tutor Card */
+.tutor-card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 0 4px 8px #333;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideIn 1.2s ease-out;
+}
+
+.tutor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px #333;
+}
+
+.intro-text2{
+    font-size: 1.1rem;
+    color: #6c757d;
+    padding: 0 160px;
+    text-align: center
+}
+/* Tutor Image (Circular) */
+.tutor-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #8c00ff;
+    transition: transform 0.3s;
+}
+
+.tutor-card:hover .tutor-image img {
+    transform: scale(1.1);
+}
+
+/* Tutor Info */
+.tutor-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.tutor-info h3 {
+    font-size: 1.5rem;
+    color: #8c00ff;
+    margin-bottom: 10px;
+}
+
+.tutor-info p {
+    color: #555;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tutors-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text2{
+        padding: 0 30px;
+    }
+}

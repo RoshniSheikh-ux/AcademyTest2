@@ -1,0 +1,64 @@
+.notification-page{
+    padding: 20px;
+    position: fixed;
+    top: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    right: -600px;
+    border: white 1px solid;
+    box-shadow: #333 0 8px 16px;
+    border-radius: 10px;
+    background-color: white;
+    transition: right 0.5s ease-in-out, opacity 0.5s;
+
+    &.notifi-active{
+        right: 10px; /* Slide into view */
+        opacity: 1; /* Make it visible */
+    }
+
+}
+
+.notifications{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border: #888 solid 1px;
+    border-radius: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.notification-text{
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* Scrollbar Styling */
+.notifications::-webkit-scrollbar {
+    width: 10px;
+}
+
+.notifications::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.notifications::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+}
+
+.main-title{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #8c00ff;
+}

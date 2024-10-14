@@ -1,0 +1,217 @@
+.nav2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    z-index: 9998;
+    padding: 15px 95px;
+    background-color: white;
+    border-bottom: 1px solid #666;
+    box-shadow: #333 0.1px 2px 8px;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    margin-top: 59px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: auto;
+    gap: 30px;
+    /* margin-top: 330px; */
+}
+
+/* toogle class for profile button  */
+.active-profile {
+    margin-top: 330px;
+}
+
+
+.profile-btn {
+    height: 40px;
+    width: 40px;
+    /* margin-top: 40px; */
+}
+
+.profile-dropdown {
+    position: fixed;
+    top: 17.5%;
+    left: -200px; /* Initially hidden to the left */
+    height: 480px;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    border: white 1px solid;
+    border-radius: 10px;
+    box-shadow: #333 2px 4px 16px;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 20px;
+    z-index: 999;
+    opacity: 0; /* Initially invisible */
+    transition: left 0.5s ease-in-out, opacity 0.5s;
+
+    /* Active state */
+    &.active {
+        left: -15px; /* Slide into view */
+        opacity: 1; /* Make it visible */
+    }
+
+    .profile-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .profile-pic {
+        width: 170px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: #8c00ff 2px solid;
+        border-radius: 50%;
+        box-shadow: #333 0.5px 2px 8px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #8c00ff;
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+    }
+}
+
+.nav2-btn {
+    background: transparent;
+    border: none;
+    padding: 2px 5px;
+
+    img {
+        width: 23px;
+    }
+}
+
+.nav2-right {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+
+.profile-btn {
+    background: transparent;
+    border: none;
+}
+
+.img-profile {
+    height: 40px;
+    width: 40x;
+}
+
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+    .nav2 {
+        padding: 15px 40px !important;
+        height: 50px !important;
+    }
+
+    .nav2-right {
+        gap: 20px;
+    }
+
+    .nav2-btn {
+        background: transparent;
+        border: none;
+        padding: 2px 5px;
+
+        img {
+            width: 20px;
+        }
+    }
+
+    #theme-icon {
+        margin-right: 15px;
+    }
+
+    .profile-btn {
+        height: 35px;
+        width: 35px;
+        /* margin-top: 40px; */
+    }
+
+    .img-profile {
+        height: 35px;
+        width: 35px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .nav2 {
+        padding: 15px 20px;
+        height: 50px !important;
+    }
+
+    .nav2-right {
+        gap: 20px;
+    }
+
+    .nav2-btn {
+        background: transparent;
+        border: none;
+        padding: 2px 5px;
+
+        img {
+            width: 20px;
+        }
+    }
+
+    #theme-icon {
+        margin-right: 15px;
+    }
+
+    .profile-btn {
+        height: 35px;
+        width: 35px;
+        /* margin-top: 40px; */
+    }
+
+    .img-profile {
+        height: 35px;
+        width: 35px;
+    }
+
+    .profile-dropdown{
+        height: 480px;
+        gap: 25px;
+        top: 17%;
+
+        .profile-options{
+            gap: 10px;
+        }
+    }
+    
+
+}
